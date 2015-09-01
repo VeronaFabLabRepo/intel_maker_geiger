@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="chrome=1">
+        <meta name="viewport" content="initial-scale=1.0, user-scalable=no, width=device-width">
+        <link rel="stylesheet" href="css/layout.css" type="text/css">
+        <link rel="stylesheet" href="resources/bootstrap/bootstrap.min.css" type="text/css">
+        <link rel="stylesheet" href="resources/bootstrap/bootstrap-responsive.min.css" type="text/css">
+        <link rel="stylesheet" href="resources/anytime/anytime.css" />
+         <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.4/leaflet.css" />
+
+        <title>Verona FabLab #IntelMaker</title>
+    </head>
+    <body>
+        <div class="navbar navbar-inverse navbar-fixed-top">
+            <div class="navbar-inner">
+                <div class="container">
+                    <h2 class="title">Verona FabLab #IntelMaker Geiger BackPack</h2>
+                </div>
+            </div>
+        </div>
+
+        <div class="container-fluid">
+
+            <div class="row-fluid">
+                <div class="span12">
+                    <div id="map" class="map"></div>
+                </div>
+            </div>
+			<div class="row-fluid">
+                <div class="span12">
+                    <h4 id="title">Verona FabLab</h4>
+                    <p id="shortdesc">Progetto Intel #maker: GeigerBackPack</p>
+                    <div id="docs">
+                        Intervallo temporale da <input type="text" id="fromTime" size="50" />
+                        a <input type="text" id="toTime" size="50" />
+                        <button onclick="load_data();">Carica dati</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <script src="resources/jquery/jquery.min.js" type="text/javascript"></script>
+        <script src="resources/anytime/anytime.js" type="text/javascript"></script>
+        <script src="resources/anytime/anytimetz.js" type="text/javascript"></script>
+        <script src="http://cdn.leafletjs.com/leaflet-0.7.4/leaflet.js"></script>
+        <script src="resources/leafletheat/heatmap.min.js" type="text/javascript"></script>
+        <script src="resources/leafletheat/leaflet-heatmap.js" type="text/javascript"></script>
+        <script src="js/leafmap.js" type="text/javascript"></script>
+        <script type="text/javascript">
+			base_url = '104.40.139.35';
+			$(document).ready(function () {
+                AnyTime.picker("fromTime",
+                        {format: "%Y-%m-%d %H:%i:%s", firstDOW: 1});
+                AnyTime.picker("toTime",
+                        {format: "%Y-%m-%d %H:%i:%s", firstDOW: 1});
+            });
+        </script>
+    </body>
+</html>
