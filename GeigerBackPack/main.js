@@ -171,9 +171,6 @@ function periodicActivity()
         }
         start = true;
 
-    console.log("End");
-	
-    
     
 }
 
@@ -231,7 +228,7 @@ function WriteLCD(row1, row2) {
     if (!lock) {
         lock = true;
         var lcd = new lcdie({rs: 3, e: 4, data: [5, 6, 7, 8], cols: 16, rows: 2});
-        console.log("lcd message: " + row1 + " " + row2);
+        console.log("lcd: " + row1 + " " + row2);
         lcd.on('ready', function () {
               lcd.setCursor(0, 0);
               lcd.print(row1);
