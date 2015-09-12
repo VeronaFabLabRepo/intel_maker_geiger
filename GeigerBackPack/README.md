@@ -2,7 +2,7 @@
  *  GeigerBackPack
  *  ========================
  *
- *  Portable radiation detection system with the Intel platform Edison and geographic tracking.
+ *  Portable radiation detection system with geographic tracking using the Intel Platform Edison.
  *  
  *  This program is free software: you can redistribute it and/or modify 
  *  it under the terms of the GNU General Public License as published by 
@@ -21,3 +21,5 @@
  *  Implementation:    Verona FabLab Team. 2015.
  *
  */
+ 
+ 
