@@ -33,7 +33,7 @@ var dateFormat = require('dateformat');
 var dblite = require('dblite');
 var http = require('http');
 
-var uri = "http://104.40.139.35:1880/geiger"; // Data to Cloud
+var uri = "http://plumake.cloudapp.net:1880/geiger"; // Data to Cloud
 var CONV_FACTOR = 0.00812; // Conversion factor - CPM to uSV/h (sensor: J305ß)
 var geiger_input = 2; // pin interrupt
 var count = 0;
@@ -241,7 +241,7 @@ function periodicActivity()
                 console.log(body) 
               } else {
                 console.log("Network Error"); 
-                setTimeout(function() {WriteLCD("Error! ","  Network Server")},3000);
+                setTimeout(function() {WriteLCD("Error! ","  Network Server")},6000);
                 ledRed4.write(1);
                 ledRed5.write(1);
                 ledGreen1.write(0);
